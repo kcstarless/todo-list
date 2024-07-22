@@ -1,0 +1,59 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo</title>
+<script type="module" src="main.bundle.js"></script></head>
+<body>
+    <div class="container">
+        <header class="sidebar">
+            <nav>
+                <ul>
+                    <li><h3>kcstarless</h3></li>
+                    <li>
+                        <h4><button class="btn--primary round">+</button> Add task</h4>
+                    </li>
+                    <div class="sidebar-today"></div>
+                    <li>
+                        <h4><button class="btn--secondary round">+</button> Add Project</h4>
+                    </li>
+                    <div class="sidebar-project"></div>
+                </ul>
+            </nav>
+        </header>
+
+        <main class='content'></main>
+        <div id="add-task-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Add Task</h2>
+                <form id="add-task-form">
+                    <label for="task-title">Task Title:</label>
+                    <input type="text" id="task-title" name="task-title" required>
+                    
+                    <label for="task-desc">Task Description:</label>
+                    <input type="text" id="task-desc" name="task-desc" required>
+                    
+                    <label for="task-date">Task Date:</label>
+                    <input type="date" id="task-date" name="task-date" required>
+                    
+                    <label for="task-priority">Task Priority:</label>
+                    <select id="task-priority" name="task-priority" required>
+                        <option value="true">High</option>
+                        <option value="false">Low</option>
+                    </select>
+                    
+                    <label for="project-title">Project Title:</label>
+                    <select id="project-title" name="project-title" required>
+                    </select>
+                    
+                    <button type="submit" class="btn--primary">Add Task</button>
+                </form>
+            </div>
+        </div>
+
+        <footer></footer>
+    </div>
+</body>
+</html>

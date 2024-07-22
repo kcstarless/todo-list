@@ -1,0 +1,26 @@
+header {
+    grid-area: header;
+    padding: var(--space-l);
+    // border: var(--border-dark);
+    // margin: var(--space-s);
+    h3 {
+      padding-top: var(--space-s);
+      padding-bottom: var(--space-s);
+    }
+    h4 {
+      // padding-left: -var(--space-s);
+      padding-top: var(--space-s);
+      padding-bottom: var(--space-s);
+    }
+    p {
+      padding-bottom: var(--space-s);
+    }
+    li {
+      padding-left: var(--space-s);
+    }
+    a {
+      color: var(--color-muted);
+      padding-left: var(--space-xl);
+      font-weight: 500;
+    }
+  }

@@ -1,0 +1,58 @@
+// Card components
+
+.card {
+    display: block;
+    margin: var(--space-xs);
+    padding: var(--space-l);
+    border: var(--border);
+    // box-shadow: var(--shadow-small);
+    border-radius: calc(var(--border-radius) * 2);
+    // border-radius: var(--border-radius);
+
+    .card-title {
+        font-size: var(--font-size-l);
+        padding-bottom: var(--space-m);
+        font-weight: 700;
+    }
+
+    .card-body {
+        display: block;
+        justify-content: start;
+        align-items: center;
+        gap: var(--space-m);
+        // border: var(--border);
+        position: relative;
+    
+        margin: var(--space-xs);
+        padding: var(--space-s);
+        border-left: solid 10px var(--color-secondary-rotate);
+        // border-bottom: var(--border);
+
+    
+        &--high {
+            border-left: solid 10px var(--color-primary-rotate);
+        }
+
+        .project {
+            color: var(--color-primary);
+            position: absolute; /* Position relative to the nearest positioned ancestor */
+            bottom: 2; /* Align to the bottom */
+            right: 5; /* Align to the right */
+            margin: 5px; /* Add some spacing from the edges */
+            font-size: 12px; /* Optional: Adjust the font size */
+        }
+        .todo-details {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: var(--space-m);
+        }
+
+        .todo-summary {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: var(--space-m);
+        }
+    }
+}
