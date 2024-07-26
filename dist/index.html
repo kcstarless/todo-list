@@ -23,7 +23,10 @@
             </nav>
         </header>
 
-        <main class='content'></main>
+        <main class='content'>
+
+        </main>
+
         <div id="add-task-modal" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
@@ -49,6 +52,18 @@
                     </select>
                     
                     <button type="submit" class="btn--primary">Add Task</button>
+                </form>
+            </div>
+        </div>
+        <div id="add-project-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Add Project</h2>
+                <form id="add-project-form">
+                    <label for="add-project-title">Project Title:</label>
+                    <input type="text" id="add-project-title" name="add-project-title" required>
+                    
+                    <button type="submit" class="btn--primary">Add Project</button>
                 </form>
             </div>
         </div>

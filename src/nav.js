@@ -1,6 +1,6 @@
 import { getProjectTodoList, getTodoList } from "./ListManager";
 import { renderAllTodo } from "./render";
-import { getProjectList } from "./project";
+import { createProject, getProjectList } from "./project";
 import { createTodo } from "./todo";
 import { format, parse } from "date-fns";
 
@@ -8,6 +8,7 @@ export function loadSidebar() {
   sidebarToday();
   sidebarProject();
   bindAddTaskEvent();
+  bindAddProjectEvent();
 }
 
 function sidebarToday() {
@@ -55,6 +56,41 @@ function sidebarProject() {
   });
 }
 
+// Add proejct event
+function bindAddProjectEvent() {
+  const addProjectButton = document.querySelector(".btn--secondary.round");
+  const modal = document.getElementById("add-project-modal");
+  const close = document.getElementsByClassName("close")[1];
+  const form = document.getElementById("add-project-form");
+
+  addProjectButton.addEventListener("click", () => {
+    modal.style.display = "block"; 
+  });
+
+  close.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  window.addEventListener("click", (event) => {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  });  
+  
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const projectTitle = document.getElementById('add-project-title').value;
+    console.log(projectTitle);
+    console.log("hello");
+
+    createProject(projectTitle);
+    modal.style.display = "none";
+    sidebarProject();
+
+  });
+}
+
+
 // add task event
 function bindAddTaskEvent() {
   const addTaskButton = document.querySelector(".btn--primary.round"); // Button for adding tasks
@@ -76,6 +112,7 @@ function bindAddTaskEvent() {
 
     modal.style.display = "block";
   });
+
   span.addEventListener("click", () => {
     modal.style.display = "none";
   });
