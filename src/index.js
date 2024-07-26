@@ -1,11 +1,10 @@
 // index.js
 
-import _ from 'lodash';
 import './styles/main.scss';
 
 import { createTodo } from './todo';
 import { createProject } from './project';
-import { getTodoList, updateTodo } from './ListManager';
+import { getTodoList } from './ListManager';
 import { renderAllTodo } from './render';
 import { loadSidebar } from './nav';
 
@@ -27,7 +26,6 @@ console.log(getTodoList());
 
 loadSidebar(getTodoList());
 renderAllTodo(getTodoList());
-
 
 // console.log(getTodoList()); //all todos (belong to project or without project)
 

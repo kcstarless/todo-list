@@ -1,5 +1,3 @@
-import { getAllProject, getProjectTodoList } from "./ListManager";
-
 const content = document.getElementsByClassName('content')[0];
 
 export function renderTodo(todo) { 
